@@ -20,7 +20,7 @@
 * [Chris]()
 * [Paresh]()
 * [Kayla]()
-
+* [Juliette Amador](https://github.com/julietteamador)
 ---
 
 ## Quick-Start
