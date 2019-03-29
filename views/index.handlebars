@@ -1,0 +1,32 @@
+<h1>Arting!</h1>
+
+<h2>Artworking ____!</h2>
+
+<ul>
+  {{#each users}}
+    {{#if post}}
+      {{ content goes here }}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Users Posts!</h2>
+
+<ul>
+  {{#each users}}
+    {{#if post}}
+      {{ content goes here }}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add Post</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="post">Post Name:</label>
+    <input type="text" id="post" name="name">
+  </div>
+
+  <button type="submit">Add Submit</button>
+</form>
