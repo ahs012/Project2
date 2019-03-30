@@ -1,0 +1,21 @@
+.col-10{
+    margin:50px;
+}
+h1{
+    margin-top: 2%;
+    text-align: center;
+    font-size: 90px;
+    font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
+    color:rgb(112, 7, 7);
+}
+#searchbar{
+    margin-left: 34%;
+    margin-top:30px;
+    width: 500px;
+    border-style: solid black;
+}
+.input-group{
+    width:500px;
+    margin-left: 34%;
+    margin-top: 16px;
+}

@@ -1,10 +1,12 @@
-.card-deck{
-    margin-top: 10%;
+.col-11{
+    margin-top: 7%;
+    
 }
 h1{
     text-align: center;
     font-size: 90px;
     font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
+    color: rgb(112, 7, 7);
 }
 .form-grouprow{
     margin-left: 490px;
