@@ -5,7 +5,8 @@ var exphbs = require("express-handlebars");
 var sequelize = require("sequelize");
 var app = express();
 var PORT = process.env.PORT || 8080;
-var session = require('express-session')
+var session = require('express-session');
+
 
 // Requiring our models for syncing
 var db = require("./models");
