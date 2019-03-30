@@ -1,11 +1,11 @@
-<h1>Arting!</h1>
+<h1>CreativeHub!</h1>
 
-<h2>Artworking ____!</h2>
+<h2>CreativeHub ____!</h2>
 
 <ul>
   {{#each users}}
     {{#if post}}
-      {{ content goes here }}
+      {{ art-block post=true}}
     {{/if}}
   {{/each}}
 </ul>
@@ -15,7 +15,7 @@
 <ul>
   {{#each users}}
     {{#if post}}
-      {{ content goes here }}
+      {{ art-block sleep=false }}
     {{/if}}
   {{/each}}
 </ul>
