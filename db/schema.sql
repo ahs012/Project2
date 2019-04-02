@@ -18,5 +18,6 @@ CREATE TABLE art_table(
  FOREIGN KEY (users_id) REFERENCES users(id),
  title VARCHAR(100),
  art_medium VARCHAR(100),
+ art_path VARCHAR(100),
  released DATE 
  );

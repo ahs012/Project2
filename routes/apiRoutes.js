@@ -37,7 +37,7 @@ module.exports = function (app, db) {
         var name = req.body.name;
         var location = req.body.location;
         var art_medium = req.body.art_medium;
-
+        var art_path = "uploads/" + file.fieldname + '-' + Date.now() + path.extname(file.originalname);
         console.log(req.body);
 
         db.art.create({
@@ -90,6 +90,7 @@ module.exports = function (app, db) {
       cb(null,file.fieldname + '-' + Date.now() + path.extname(file.originalname));
     }
     });
+
      // Init Upload
     const upload = multer({
         storage: storage,
