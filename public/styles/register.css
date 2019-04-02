@@ -2,7 +2,7 @@ h1{
     text-align: center;
     color: rgb(112, 7, 7);
     font-size-adjust: initial;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .form-group{
     margin-left: 10%;
@@ -13,21 +13,15 @@ h1{
     width: 20%;
     margin-left: 40%;   
     margin-right: 40%;
+    color: rgb(112, 7, 7);
+    border-color:rgb(112, 7, 7);  
 }
-#footer{
-    position: absolute;
-    color:black;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    background-color: #efefef;
-    text-align: center;
-    
-}
+
 #image-logo{
     width: 15%;
+    margin-left: 5%;
 }
+
 #slogan{
     color: #c3c3c3;
     font-size: 18px;
@@ -38,10 +32,72 @@ h1{
     letter-spacing: 0;
 }
 .menu_block{
-    height: 62px;
-    background-color: black;
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 5%;
+    color: rgb(112, 7, 7);
 }
+
 #search{
     color:  rgb(112, 7, 7);;
     border-color: rgb(112, 7, 7);
+    box-shadow: rgb(112, 7, 7);
 }
+
+.form-inline {
+    display: flex;
+    margin-left: 345px;
+}
+
+body{
+    background-image: url(../photos/images/main.jpg);
+    background-size: 100%;
+}
+
+.container-middle{
+    margin: 87px 0 137px;
+    display: inline-block;
+    width: 100%;
+    background: white;
+    box-sizing: border-box;
+    padding: 2%;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=20);
+    opacity: 0.7;
+}
+
+
+.login-content-right{
+    float: right;
+    
+}
+
+h2{
+    font-weight: 400;
+    font-size: 32px;
+    margin: 0 0 100px;
+    text-transform: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:  rgb(112, 7, 7);
+    padding-top: 24px;
+}
+
+.login-content-left{
+    float: left;
+}
+
+#footer{
+ text-align: center;
+ background-color: #c3c3c3;
+}
+
+a{
+    color: rgb(112, 7, 7);
+    padding: 0px, 8px ;
+}
+
+a:hover {
+    color:rgb(112, 7, 7);
+  }

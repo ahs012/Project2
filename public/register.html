@@ -14,65 +14,84 @@
   <title>Register | CreativeHub</title>
 </head>
 <!--Font Awesome-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 <body>
   <!--Wesbite Header-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img id="image-logo" src="../photos/logo/main-logo.PNG">
-    <a class="navbar-brand" id="slogan" href="#">The home for innovative minds</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <div class="top-info">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <img id="image-logo" src="../public/photos/logo/main-logo.PNG">
+      <a class="navbar-brand" id="slogan" href="#">The home for innovative minds</a>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search">Search</button>
+        <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" id="search"><i
+            class="fas fa-search"></i></button>
       </form>
-    </div>
-    <div id="undefined-sticky-wrapper" class="sticky-wrapper">
+  </div>
+  <div class="clearfixed-container">
+    <div class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="menu_block">
-    <div class="container clearfix">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-         
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Discover</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Profile</a>
-        </li>
-      </ul>
-  </nav>
-</div>
-</div>
-</div>
+        <a href="#discover">Discover/</a>
+        <a href="#profile">Profile/</a>
+        <a href="#signin">Sign In</a>
+      </div>
+    </div>
+  </div>
   <!--Form-->
-  <h1>Register</h1>
-  <form>
-    <div class="form-group">
-      <label for="exampleFormControlInput1">User Name</label>
-      <input type="user-name" class="form-control" id="exampleFormControlInput1" placeholder="Username">
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlInput1">Email</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Select Interest</label>
-      <select class="form-control" id="exampleFormControlSelect1" placeholder="Interest">
-        <option>Film</option>
-        <option>Digital Media</option>
-        <option>Performance Art</option>
-        <option>Painting</option>
-        <option>Crafts</option>
-        <option>Miscallenaous</option>
-      </select>
-    </div>
-    <button type="register" id="register" class="btn btn-primary">Register</button>
-  </form>
+  <div class="container-middle">
+    <section class="login-content-left col-md-6">
+      <h1>Create New Account</h1>
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Full Name</label>
+          <input type="user-name" class="form-control" id="name" placeholder="First Name, Last Name">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">User Name</label>
+          <input type="user-name" class="form-control" id="user-name" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Select Interest</label>
+          <select class="form-control" id="interest" placeholder="Interest">
+            <option>Film</option>
+            <option>Digital Media</option>
+            <option>Performance Art</option>
+            <option>Painting</option>
+            <option>Crafts</option>
+            <option>Miscallenaous</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="user-name" class="form-control" id="Location" placeholder="City, State">
+        </div>
+        <div class="form-group">
+          <label for="bio">About Me</label>
+          <textarea class="form-control" id="bio" placeholder="Tell us about yourself!" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Password</label>
+          <input type="user-name" class="form-control" id="password" placeholder="Password">
+        </div>
+        <button type="register" id="register" class="btn btn-outline-danger">Register</button>
+      </form>
+    </section>
+    <section id="login-content-right col-md-6">
+      <h2>Join our exclusive community of artistic minds!</h2>
+      <span class="join">When you join CreativeHub, you join a community of artistic lovers who value uniqueness.</span>
+      <div id="why">
+        Why join?
+        <li>Get exclusive access to various networking events</li>
+        <li>Be the first to see fresh new videography, writing, art, ect.!</li>
+        <li>Meet and chat with your peers, who have similar interest</li>
+      </div>
+  </div>
+  </section>
   <!--Footer-->
   <div id='footer' class="fixed-bottom">
     <small>&copy; 2019, CreativeHub</small>
