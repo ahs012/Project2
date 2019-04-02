@@ -7,6 +7,10 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 var session = require('express-session');
 
+// Require for IMG Uploader
+const multer = require('multer');
+const ejs = require('ejs');
+const path = require('path');
 
 // Requiring our models for syncing
 var db = require("./models");
@@ -15,8 +19,8 @@ var db = require("./models");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Static directory
-app.use(express.static("public"));
+// Static directory set as Public
+app.use(express.static("./public"));
 
 //express sessions
 app.use(session({ secret: 'krunal', resave: false, saveUninitialized: true, }));
