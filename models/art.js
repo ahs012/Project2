@@ -1,10 +1,10 @@
 module.exports = function (sequelize, DataTypes) {
     var art = sequelize.define("art",
        {
-          user: { type: DataTypes.STRING },
-          name: { type: DataTypes.STRING },
-          location: { type: DataTypes.STRING },
+          user_name: { type: DataTypes.STRING },
+          title: { type: DataTypes.STRING },
           art_medium: { type: DataTypes.STRING },
+          art_path: { type: DataTypes.STRING },
        }
     );
  
