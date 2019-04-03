@@ -59,7 +59,8 @@ module.exports = function (app, db) {
         var name = req.body.name;
         var location = req.body.location;
         var type = req.body.type;
-        var dates = req.body.dates;
+        var startDate = req.body.startDate;
+        var endDate = req.body.endState;
         var contact = req.body.contact;
 
         console.log(req.body);
@@ -69,12 +70,14 @@ module.exports = function (app, db) {
             name: name,
             location: location,
             type: type,
-            dates: dates,
+            startDate: startDate,
+            endDate: endDate,
             contact: contact
         }).then(function (data) {
             res.json(data);
+            console.log("job has been posted");
         })
-        console.log("job has been posted");
+        
     });
 
     ///////////////////////
