@@ -1,7 +1,7 @@
 h1{
     text-align: center;
     font-size: 90px;
-    font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
+    font-family: 'Muli', sans-serif;
 }
 
 #slogan{
@@ -17,7 +17,7 @@ h1{
     display: block;
     position: relative;
     text-transform: uppercase;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Muli', sans-serif;
     margin-left: 5%;
     color: rgb(112, 7, 7);
 }
@@ -30,7 +30,10 @@ h1{
 
 .form-inline {
     display: flex;
-    margin-left: 245px;
+    margin-left: 345px;
+    position: absolute;
+    left: 45%;
+    top: 25%;
 }
 
 a{
