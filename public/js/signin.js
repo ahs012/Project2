@@ -16,4 +16,8 @@ $(document).ready(function () {
             })
 
     };
+
+    $("document").on("click", "#account",function(){
+        window.location.replace("/register");
+    })
 })    
