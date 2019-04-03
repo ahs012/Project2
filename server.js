@@ -12,6 +12,10 @@ const multer = require('multer');
 const ejs = require('ejs');
 const path = require('path');
 
+// Set Handlebars as view engine
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 // Requiring our models for syncing
 var db = require("./models");
 
@@ -30,10 +34,15 @@ app.use(session({ secret: 'krunal', resave: false, saveUninitialized: true, }));
 require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
 
+
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync({ force: false }).then(function () {
   app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
   });
+});
+
+app.get("/upload", function(req, res){
+  res.sendFile(path.join(__dirname, "./upload.html"))
 });

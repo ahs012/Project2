@@ -17,6 +17,7 @@ email VARCHAR(100)
  art_id INT PRIMARY KEY AUTO_INCREMENT,
  users_id INT,
  FOREIGN KEY (users_id) REFERENCES users(id),
+ user_name VARCHAR(100),
  title VARCHAR(100),
  art_medium VARCHAR(100),
  art_path VARCHAR(100),
