@@ -6,15 +6,11 @@ var sequelize = require("sequelize");
 var app = express();
 var PORT = process.env.PORT || 8080;
 var session = require('express-session');
-<<<<<<< HEAD
-var ajax = require('ajax');
-=======
 
 // Require for IMG Uploader
 const multer = require('multer');
 const ejs = require('ejs');
 const path = require('path');
->>>>>>> 56ce27aea5b178392b581c0066968037f64c6df1
 
 // Requiring our models for syncing
 var db = require("./models");

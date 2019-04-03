@@ -75,9 +75,6 @@ module.exports = function (app, db) {
         console.log("job has been posted");
     });
 
-<<<<<<< HEAD
-
-=======
     ///////////////////////
     ///// IMG Upload //////
     ///////////////////////
@@ -146,7 +143,6 @@ module.exports = function (app, db) {
 
     app.get('/upload', (req, res) => res.render('index.ejs'));
    
->>>>>>> 56ce27aea5b178392b581c0066968037f64c6df1
     ////////////GET REQUESTS/////////////////
 
     //all users
