@@ -9,6 +9,7 @@ module.exports = function (app, db) {
     app.post("/api/user/", function (req, res) {
         console.log('user route hit')
         console.log(req.body);
+        var user_name= req.body.user_name;
         var name = req.body.name;
         var email = req.body.email;
         var location = req.body.location;
@@ -19,6 +20,7 @@ module.exports = function (app, db) {
         console.log(req.body);
 
         db.user.create({
+            user_name:user_name,
             name: name,
             email: email,
             location: location,
@@ -149,10 +151,11 @@ module.exports = function (app, db) {
     app.get("/api/user/", function (req, res) {
         var user = req.session.user;
 
-        db.user.findAll().then(function (allUsers) {
+        db.user.findAll({where:{USE}}).then(function (allUsers) {
             res.json(allUsers);
         })
     });
+
 
     //all art
     app.get("/api/art/", function (req, res) {

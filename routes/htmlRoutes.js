@@ -19,9 +19,9 @@ app.get("/register", function(req, res){
     res.sendFile(path.join(__dirname, "../public/register.html"))
 });
 //profile route
- app.get("/profile/:username", function(req, res){
+ app.get("/profile", function(req, res){
    
-     res.render(path.join(__dirname, "../public/profile.html"))
+     res.sendFile(path.join(__dirname, "../public/profile.html"))
  });
 
 };
