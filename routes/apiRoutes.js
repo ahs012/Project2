@@ -198,7 +198,7 @@ module.exports = function (app, db) {
             res.json(artName);
         });
     });
-    
+
     //get user by name
     app.get("/api/user/:user_name", function (req, res) {
         var user_name = req.params.user_name;
@@ -214,11 +214,66 @@ module.exports = function (app, db) {
         var location = req.params.location;
         db.user.findAll({
             where: { location: location }
-        });
+        }).then(function (artistLoc) {
+            res.json(artistLoc);
+        })
     });
+    
+    ////////////UPDATE REQUESTS/////////////////
+
+    //update art post
+    app.put("/api/art", function(req, res) {
+        db.art.update(req.body,
+          {
+            where: {
+              name: req.body.name
+            }
+          })
+          .then(function(update) {
+            res.json(update);
+          });
+      });
+
+    //update job post
+
+    app.put("/api/jobs", function(req, res) {
+        db.jobs.update(req.body,
+          {
+            where: {
+              name: req.body.id
+            }
+          })
+          .then(function(dbPost) {
+            res.json(dbPost);
+          });
+      });
 
    
     ////////////DELETE REQUESTS/////////////////
 
+    //delete job post by name
+    
+    app.delete("/api/jobs/:name", function(req, res){
+        var name=req.params.name;
+        db.jobs.destroy({
+            where:{
+                name:name
+            }
+        }).then(function(data){
+            res.json(data);
+        })
+    })
+    
+    //delete art by name
 
+    app.delete("/api/art/:name", function(req, res){
+        var name=req.params.name;
+        db.jobs.destroy({
+            where:{
+                name:name
+            }
+        }).then(function(data){
+            res.json(data);
+        })
+    })
 }
