@@ -22,6 +22,19 @@ h1{
     color: rgb(112, 7, 7);
 }
 
+.container-middle{
+    margin: 87px 0 137px;
+    display: inline-block;
+    width: 100%;
+    background: white;
+    box-sizing: border-box;
+    padding: 2%;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=20);
+    opacity: 0.7;
+    background-color:white;
+}
+
 #search{
     color:  rgb(112, 7, 7);;
     border-color: rgb(112, 7, 7);
