@@ -10,11 +10,10 @@ $(document).ready(function () {
             password: $("#password").val().trim()
         }
 
-        localStorage.setItem('user', user_name)
-
-            .then(function () {
-                window.location.replace("/discover")
+        $.get(`/api/user/${user.user_name}`).then(function (user) {
+             localStorage.setItem('user', user.user_name);
+             window.location.replace("/discover");
             })
 
-    }
+    };
 })    
