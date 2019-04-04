@@ -2,6 +2,8 @@ h1{
     text-align: center;
     font-size: 90px;
     font-family: 'Muli', sans-serif;
+    color: rgb(112, 7, 7);
+    padding-top: 5%;
 }
 
 #slogan{
@@ -58,3 +60,55 @@ body{
 nav{
     overflow: hidden;
  }
+
+.jumbotron{
+    margin-top: 5%;
+}
+
+/* CSS for the Discover page (random artist) layout. */
+
+.person {
+    background: #e7e7e7;
+    border: 1px solid #999;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 0 0 15px 0;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    background: #f2f5f6;
+    background: linear-gradient(
+      to bottom,
+      #f2f5f6 0%,
+      #e3eaed 37%,
+      #c8d7dc 100%
+    );
+  }
+  .person:hover {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffc578+0,fb9d23+100;Orange+3D+%233 */
+    background: #ffc578; /* Old browsers */
+    background: linear-gradient(to bottom, #ffc578 0%, #fb9d23 100%); /* W3C */
+  }
+  .person-image {
+    border: 1px solid #666;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+  }
+  .person-name {
+    font-weight: bold;
+  }
+  .person-city {
+    font-weight: 300;
+  }
+  .person-street {
+    font-weight: 300;
+  }
+  .person-number {
+    font-weight: 300;
+  }
+
+.col-xs-12{
+    font-family: 'Muli', sans-serif;
+    color: rgb(112, 7, 7);
+}
+
+button{
+    color:rgb(112, 7, 7);
+}
