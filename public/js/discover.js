@@ -83,6 +83,7 @@ $(function() {
         
 //         var newPostTitle = $("<h2>");
 
+
 //         var newPostCategory = $("<h5>");
 //         newPostCategory.text(post.category);
 //         newPostCategory.css({
@@ -110,6 +111,7 @@ $(function() {
 //         newPostCard.data("post", post);
 //         return newPostCard;
 //     }
+
 
     
     

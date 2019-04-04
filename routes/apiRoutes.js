@@ -159,14 +159,14 @@ module.exports = function (app, db) {
     });
 
     //job by type
-    app.get("/api/jobs/:type", function (req, res) {
-        var type = req.params.type;
-        db.jobs.findOne({
-            where: { type: type }
-        }).then(function (jobType) {
-            res.json(jobType);
-        });
-    });
+    // app.get("/api/jobs/:type", function (req, res) {
+    //     var type = req.params.type;
+    //     db.jobs.findOne({
+    //         where: { type: type }
+    //     }).then(function (jobType) {
+    //         res.json(jobType);
+    //     });
+    // });
 
     //job by user
     app.get("/api/jobs/:user_name", function (req, res) {
