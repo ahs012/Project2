@@ -65,3 +65,7 @@ body{
     background-image: url(../photos/images/main.jpg);
     background-size: 100%;
 }
+
+nav{
+    overflow: hidden;
+ }
