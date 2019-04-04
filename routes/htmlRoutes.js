@@ -19,14 +19,17 @@ app.get("/register", function(req, res){
     res.sendFile(path.join(__dirname, "../public/register.html"))
 });
 //profile route
- app.get("/profile", function(req, res){
+ app.get("/profile/:user_name", function(req, res){
    
      res.sendFile(path.join(__dirname, "../public/profile.html"))
+
  });
 //jobs route
 app.get("/jobs", function(req, res){
    
     res.sendFile(path.join(__dirname, "../public/jobs.html"))
+=======
 });
-};
+
+
 

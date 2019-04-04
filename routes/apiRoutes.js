@@ -1,89 +1,6 @@
-
 module.exports = function (app, db) {
     var db = require("../models");
 
-    ////////////POST REQUESTS/////////////////
-
-    //post new user 
-
-    app.post("/api/user/", function (req, res) {
-        console.log('user route hit')
-        console.log(req.body);
-        var user_name= req.body.user_name;
-        var name = req.body.name;
-        var email = req.body.email;
-        var location = req.body.location;
-        var artType = req.body.artType;
-        var bio = req.body.bio;
-
-
-        console.log(req.body);
-
-        db.user.create({
-            user_name:user_name,
-            name: name,
-            email: email,
-            location: location,
-            artType: artType,
-            bio: bio
-        }).then(function (data) {
-            res.json(data)
-        })
-    });
-
-    //post new art
-    app.post("/api/newArt/", function (req, res) {
-        console.log('art route hit')
-        console.log(req.body);
-        var user = req.body.user;
-        var name = req.body.name;
-        var location = req.body.location;
-        var art_medium = req.body.art_medium;
-        var art_path = "uploads/" + file.fieldname + '-' + Date.now() + path.extname(file.originalname);
-        console.log(req.body);
-
-        db.art.create({
-            user: user,
-            name: name,
-            location: location,
-            art_medium: art_medium,
-            art_path: art_path
-        }).then(function (data) {
-            res.json(data)
-        })
-    });
-
-    //post new job
-    app.post("/api/jobs", function (req, res) {
-        console.log("job post route hit");
-        var position = req.body.position;
-        var name = req.body.name;
-        var location = req.body.location;
-        var type = req.body.type;
-        var startDate = req.body.startDate;
-        var endDate = req.body.endState;
-        var contact = req.body.contact;
-
-        console.log(req.body);
-
-        db.jobs.create({
-            position: position,
-            name: name,
-            location: location,
-            type: type,
-            startDate: startDate,
-            endDate: endDate,
-            contact: contact
-        }).then(function (data) {
-            res.json(data);
-            console.log("job has been posted");
-        })
-        
-    });
-
-    ///////////////////////
-    ///// IMG Upload //////
-    ///////////////////////
     const express = require('express');
     const multer = require('multer');
     const path = require('path');
@@ -123,31 +40,95 @@ module.exports = function (app, db) {
     }
     // EJS View Engine
     app.set('view engine', 'ejs');  
-    
-    // IMG Upload Post
-     app.post('/upload', (req, res) => {
-        upload(req, res, (err) => {
-          if(err){
-            res.render('index', {
-              msg: err
-            });
-          } else {
-            if(req.file == undefined){
-              res.render('index', {
-                msg: 'Error: No File Selected!'
-              });
-            } else {
-              res.render('index', {
-                msg: 'File Uploaded!',
-                file: `uploads/${req.file.filename}`
-                // TAKE req.file.filename and add as path in database
-              });
-            }
-          }
-        });
+
+    ////////////POST REQUESTS/////////////////
+
+    //post new user 
+
+    app.post("/api/user/", function (req, res) {
+        console.log('user route hit')
+        console.log(req.body);
+        var name = req.body.name;
+        var email = req.body.email;
+        var location = req.body.location;
+        var artType = req.body.artType;
+        var bio = req.body.bio;
+
+
+        console.log(req.body);
+
+        db.user.create({
+            name: name,
+            email: email,
+            location: location,
+            art_medium: art_medium,
+            bio: bio
+        }).then(function (data) {
+            res.json(data)
+        })
     });
 
-    app.get('/upload', (req, res) => res.render('index.ejs'));
+    //post new art
+    app.post("/api/newArt/",  function (req, res) {
+
+        upload(req, res, (err) => {
+            console.log('art route hit')
+            console.log(req.body);
+            if(err){
+              res.render('index', {
+                msg: err
+              });
+            } else {
+              if(req.file == undefined){
+                res.render('index', {
+                  msg: 'Error: No File Selected!'
+                });
+              } else { 
+                var user_name = req.body.user_name;
+                var title = req.body.title;
+                var art_medium = req.body.art_medium;
+                var art_path = `uploads/${req.file.filename}`
+        
+                db.art.create({
+                    user_name: user_name,
+                    title: title,
+                    art_medium: art_medium,
+                    art_path: art_path
+                }).then(function (data) {
+                    res.json(data)
+                })
+
+              }
+            }
+        });
+
+
+    });
+
+    //post new job
+    app.post("/api/jobs", function (req, res) {
+        console.log("job post route hit");
+        var position = req.body.position;
+        var name = req.body.name;
+        var location = req.body.location;
+        var type = req.body.type;
+        var dates = req.body.dates;
+        var contact = req.body.contact;
+
+        console.log(req.body);
+
+        db.jobs.create({
+            position: position,
+            name: name,
+            location: location,
+            type: type,
+            dates: dates,
+            contact: contact
+        }).then(function (data) {
+            res.json(data);
+        })
+        console.log("job has been posted");
+    });
    
     ////////////GET REQUESTS/////////////////
 
@@ -155,11 +136,10 @@ module.exports = function (app, db) {
     app.get("/api/user/", function (req, res) {
         var user = req.session.user;
 
-        db.user.findAll({where:{USE}}).then(function (allUsers) {
+        db.user.findAll().then(function (allUsers) {
             res.json(allUsers);
         })
     });
-
 
     //all art
     app.get("/api/art/", function (req, res) {
