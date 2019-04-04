@@ -30,11 +30,19 @@ h1{
     box-sizing: border-box;
     padding: 2%;
     background:white;
+<<<<<<< HEAD
  }
  
  
  
  .jobBox{
+=======
+}
+
+
+
+.jobBox{
+>>>>>>> 21105c56a56c3e018c409efc9f21d1ed0bb6ae49
     margin: 87px 0 137px;
     display: inline-block;
     width: 100%;
@@ -42,9 +50,15 @@ h1{
     box-sizing: border-box;
     padding: 2%;
     background:white;
+<<<<<<< HEAD
  }
  
  #search{
+=======
+}
+
+#search{
+>>>>>>> 21105c56a56c3e018c409efc9f21d1ed0bb6ae49
     color:  rgb(112, 7, 7);;
     border-color: rgb(112, 7, 7);
     box-shadow: rgb(112, 7, 7);
