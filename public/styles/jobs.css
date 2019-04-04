@@ -37,7 +37,6 @@ h1{
 
 
 .jobBox{
-    margin: 87px 0 137px;
     display: inline-block;
     width: 100%;
     background: white;
@@ -92,7 +91,6 @@ h1{
      font-family: 'Roboto', sans-serif;
      font-size: 20px;
      text-align: center;
-     margin-top: 15%;
  }
 
  .btn-danger{
