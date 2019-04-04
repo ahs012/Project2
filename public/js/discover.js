@@ -34,7 +34,9 @@ $(function() {
     });
   
     getData();
-  });// //$(document).ready(function () {
+  });
+  
+  // //$(document).ready(function () {
 
 //     var cardContainer = $(".card-container");
 //     var postCategorySelect = $("#category");
