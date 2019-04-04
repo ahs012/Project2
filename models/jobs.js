@@ -7,7 +7,7 @@ module.exports = function (sequelize, DataTypes) {
           type: { type: DataTypes.STRING },
           startDate: {type: DataTypes.STRING},
           endDate:{type: DataTypes.STRING},
-          contact:{type: DataTypes.STRING}
+          user_name:{type: DataTypes.STRING}
        }
     );
  

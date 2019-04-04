@@ -59,13 +59,11 @@ $(document).ready(function () {
         newPostCardBody.addClass("card-body");
         var newPostBody = $("<p>");
         newPostTitle.text(post.title + " ");
-        newPostBody.text(post.body);
+        newPostBody.text(post.user_name);
+        newPostBody.text(post.file);
         // var formattedDate = new Date(post.createdAt);
         // formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
         // newPostDate.text(formattedDate);
-        newPostTitle.append(newPostDate);
-        newPostCardHeading.append(deleteBtn);
-        newPostCardHeading.append(editBtn);
         newPostCardHeading.append(newPostTitle);
         newPostCardHeading.append(newPostCategory);
         newPostCardBody.append(newPostBody);
