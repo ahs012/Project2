@@ -3,8 +3,9 @@
     "username": "root",
     "password": "root",
     "database": "users_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "host": "localhost",
+    "dialect": "mysql",
+    "port":"3306"
   }
 }
  
