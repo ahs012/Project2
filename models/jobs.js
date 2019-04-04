@@ -5,8 +5,8 @@ module.exports = function (sequelize, DataTypes) {
           name: { type: DataTypes.STRING },
           location: { type: DataTypes.STRING },
           type: { type: DataTypes.STRING },
-          startDate: {type: DataTypes.TEXT},
-          endDate:{type: DataTypes.TEXT},
+          startDate: {type: DataTypes.STRING},
+          endDate:{type: DataTypes.STRING},
           contact:{type: DataTypes.STRING}
        }
     );
