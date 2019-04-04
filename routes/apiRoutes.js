@@ -48,6 +48,7 @@ module.exports = function (app, db) {
     app.post("/api/user/", function (req, res) {
         console.log('user route hit')
         console.log(req.body);
+        var user_name=req.body.user_name
         var name = req.body.name;
         var email = req.body.email;
         var location = req.body.location;
@@ -58,10 +59,11 @@ module.exports = function (app, db) {
         console.log(req.body);
 
         db.user.create({
+            user_name:user_name,
             name: name,
             email: email,
             location: location,
-            art_medium: art_medium,
+            artType: artType,
             bio: bio
         }).then(function (data) {
             res.json(data)
@@ -188,7 +190,7 @@ module.exports = function (app, db) {
 
     //get user by name
     app.get("/api/user/:user_name", function (req, res) {
-        var user_name = req.params.user_name;
+     var user_name = req.params.user_name;
         db.user.findOne({
             where: { user_name: user_name }
         }).then(function (userName) {
@@ -249,7 +251,7 @@ module.exports = function (app, db) {
         }).then(function(data){
             res.json(data);
         })
-    })
+    });
     
     //delete art by name
 
@@ -262,5 +264,5 @@ module.exports = function (app, db) {
         }).then(function(data){
             res.json(data);
         })
-    })
+    });
 }
