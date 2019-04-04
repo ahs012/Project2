@@ -29,10 +29,19 @@ h1{
     background: white;
     box-sizing: border-box;
     padding: 2%;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    filter: alpha(opacity=20);
-    opacity: 0.7;
-    background-color:white;
+    background:white;
+}
+
+
+
+.jobBox{
+    margin: 87px 0 137px;
+    display: inline-block;
+    width: 100%;
+    background: white;
+    box-sizing: border-box;
+    padding: 2%;
+    background:white;
 }
 
 #search{

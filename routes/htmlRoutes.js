@@ -23,6 +23,10 @@ app.get("/register", function(req, res){
    
      res.sendFile(path.join(__dirname, "../public/profile.html"))
  });
-
+//jobs route
+app.get("/jobs", function(req, res){
+   
+    res.sendFile(path.join(__dirname, "../public/jobs.html"))
+});
 };
 

@@ -46,7 +46,8 @@ module.exports = function (app, db) {
             user: user,
             name: name,
             location: location,
-            art_medium: art_medium
+            art_medium: art_medium,
+            art_path: art_path
         }).then(function (data) {
             res.json(data)
         })
