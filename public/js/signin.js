@@ -13,7 +13,7 @@ $(document).ready(function () {
 
         $.get(`/api/user/${user.user_name}`).then(function (user) {
              localStorage.setItem('user', user.user_name);
-             window.location.replace("/discover");
+             window.location.replace("/profile");
             })
 
     };
