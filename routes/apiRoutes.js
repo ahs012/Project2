@@ -84,12 +84,10 @@ module.exports = function (app, db) {
                   msg: 'Error: No File Selected!'
                 });
               } else { 
-                console.log("it is" + req.file);
                 var user_name = req.body.user_name;
                 var title = req.body.title;
                 var art_medium = req.body.art_medium;
-                var art_path = "uploads/" + req.file.fileName;
-                console.log("it is" + req.file.fileName);
+                var art_path = `uploads/${req.file.filename}`
         
                 db.art.create({
                     user_name: user_name,
