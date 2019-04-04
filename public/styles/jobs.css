@@ -30,19 +30,13 @@ h1{
     box-sizing: border-box;
     padding: 2%;
     background:white;
-<<<<<<< HEAD
- }
- 
- 
- 
- .jobBox{
-=======
+    color: rgb(112, 7, 7);
+    font-family: 'Muli', sans-serif;
 }
 
 
 
 .jobBox{
->>>>>>> 21105c56a56c3e018c409efc9f21d1ed0bb6ae49
     margin: 87px 0 137px;
     display: inline-block;
     width: 100%;
@@ -50,15 +44,9 @@ h1{
     box-sizing: border-box;
     padding: 2%;
     background:white;
-<<<<<<< HEAD
- }
- 
- #search{
-=======
 }
 
 #search{
->>>>>>> 21105c56a56c3e018c409efc9f21d1ed0bb6ae49
     color:  rgb(112, 7, 7);;
     border-color: rgb(112, 7, 7);
     box-shadow: rgb(112, 7, 7);
@@ -104,4 +92,39 @@ h1{
      font-family: 'Roboto', sans-serif;
      font-size: 20px;
      text-align: center;
+     margin-top: 15%;
  }
+
+ .btn-danger{
+     border-color: rgb(112, 7, 7);
+     background-color: white;
+     color: rgb(112, 7, 7);
+ }
+
+ 
+
+.login-content-right{
+    float: right;
+}
+
+.login-content-left{
+   float: left;
+}
+
+nav{
+   overflow: hidden;
+}
+
+h2{
+   text-align: center;
+   font-family: 'Muli', sans-serif;
+   color: rgb(112, 7, 7);
+}
+
+li{
+   text-align: center;
+}
+
+h3{
+   margin-top: 75px;
+}
